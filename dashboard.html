@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Личный кабинет | Sarbaz+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sarbaz+</h1>
+<nav id="main-nav">
+  <a href="index.html">Главная</a>
+  <a href="register.html">Регистрация</a>
+  <a href="login.html">Вход</a>
+  <a href="application.html">Заявка</a>
+  <a href="articles.html">Статьи</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+  </header>
+
+  <main class="section">
+    <h2>Личный кабинет</h2>
+
+    <!-- PROFILE EDIT -->
+    <section id="profile-section">
+      <h3>Профиль</h3>
+      <form id="profile-form" enctype="multipart/form-data">
+        <input name="full_name" placeholder="ФИО" required><br>
+        <input name="birth_date" type="date" required><br>
+        <input name="email" type="email" required><br>
+        <input name="phone" placeholder="Телефон" required><br>
+        <input name="address" placeholder="Адрес"><br>
+        <input name="education" placeholder="Образование"><br>
+        <input name="experience" placeholder="Опыт работы"><br>
+        <label>Наличие отсрочки:
+          <select name="deferment">
+            <option value="none">Нет</option>
+            <option value="yes">Да</option>
+          </select>
+        </label><br>
+        <textarea name="comment" placeholder="Комментарий"></textarea><br>
+        <label>Загрузить документы:</label>
+        <input type="file" name="documents" multiple><br>
+        <button type="submit">Сохранить профиль</button>
+      </form>
+      <pre id="profile-result"></pre>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section id="applications-section">
+      <h3>Мои заявки</h3>
+      <ul id="applications-list"></ul>
+
+      <h4>Новая заявка</h4>
+      <form id="application-form" enctype="multipart/form-data">
+        <label>Тип службы:
+          <select name="service_type" required>
+            <option value="contract">Контрактная</option>
+            <option value="conscription">Срочная</option>
+          </select>
+        </label><br>
+        <textarea name="application_comment" placeholder="Ваш комментарий"></textarea><br>
+        <label>Прикрепить файлы:</label>
+        <input type="file" name="application_docs" multiple><br>
+        <button type="submit">Отправить заявку</button>
+      </form>
+      <pre id="application-result"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
